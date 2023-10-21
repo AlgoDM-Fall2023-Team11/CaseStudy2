@@ -27,11 +27,9 @@ def create_session():
 @st.cache_data(show_spinner=False)
 def load_data():
     historical_data = session.table("MARKETING_BUDGETS_FEATURES").unpivot("BUDGET", "CHANNEL", ["SEARCH_ENGINE", "SOCIAL_MEDIA", "VIDEO", "EMAIL"]).filter(col("MONTH") != 7)
-    import calendar
-    historical_data['MONTH'] = calendar.month_name[historical_data['MONTH']]
     df_last_six_months_allocations = historical_data.drop("ROI").to_pandas()
     df_last_six_months_roi = historical_data.drop(["CHANNEL", "BUDGET"]).distinct().to_pandas()
-    df_last_months_allocations = historical_data.filter(col("MONTH") == "June").to_pandas()
+    df_last_months_allocations = historical_data.filter(col("MONTH") == 6).to_pandas()
     return historical_data.to_pandas(), df_last_six_months_allocations, df_last_six_months_roi, df_last_months_allocations
 
 # Streamlit config
