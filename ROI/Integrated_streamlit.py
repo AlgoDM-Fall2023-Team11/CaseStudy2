@@ -9,11 +9,22 @@ from snowflake.snowpark.session import Session
 from snowflake.snowpark.functions import col
 import streamlit as st
 from snowflake.snowpark.functions import *
+from numpy import round
+APP_ICON_URL = "https://i.imgur.com/dBDOHH3.png"
 
 
 def app1():
     # Streamlit interface
     st.title("Customer Sales Prediction")
+
+    connection = connect(
+        user='NAKULSHILEDAR',
+        password='13April1998$',
+        account='zaplmed-dqb37133',
+        warehouse='FE_AND_INFERENCE_WH',
+        database='tpcds_xgboost',
+        schema='demo'
+    )
 
     # Input fields
     gender = st.selectbox("Gender", ["M", "F"])
@@ -22,7 +33,7 @@ def app1():
     education_status = st.selectbox("Education Status", ["2 yr Degree", "4 yr Degree", "Advanced Degree", "College", "Primary", "Secondary", "Unknown"])
     birth_year = st.number_input("Birth Year", value=1990)
     dependency_count = st.number_input("Dependency Count", value=1)
-
+    
 
     if st.button("Predict"):
     # Create a dictionary for one-hot encoding
@@ -50,36 +61,24 @@ def app1():
     }
 
     # Create a DataFrame from the input data
-    input_data_df = pd.DataFrame(input_data_dict)
+        input_data_df = pd.DataFrame(input_data_dict)
 
 
     # Connect to Snowflake
-    connection = connect(
-        user='NAKULSHILEDAR',
-        password='13April1998$',
-        account='zaplmed-dqb37133',
-        warehouse='FE_AND_INFERENCE_WH',
-        database='tpcds_xgboost',
-        schema='demo'
-    )
 
     # Call Snowflake UDF
-    with connection.cursor() as cursor:
-        cursor.execute(f"SELECT TPCDS_PREDICT_CLV({','.join(map(str, input_data_df.values[0]))})")
-        prediction = cursor.fetchone()[0]
+        with connection.cursor() as cursor:
+            cursor.execute(f"SELECT TPCDS_PREDICT_CLV({','.join(map(str, input_data_df.values[0]))})")
+            prediction = cursor.fetchone()[0]
 
-    st.write(f"Predicted Total Sales: {prediction}")
+        st.write(f"Predicted Total Sales: {prediction}")
 
-def app2():
-    # Snowpark for Python API reference: https://docs.snowflake.com/en/developer-guide/snowpark/reference/python/index.html
-# Snowpark for Python Developer Guide: https://docs.snowflake.com/en/developer-guide/snowpark/python/index.html
-# Streamlit docs: https://docs.streamlit.io/
-
+def app3():
+    from snowflake.snowpark.functions import col
+    from numpy import round
 
 
-    APP_ICON_URL = "https://i.imgur.com/dBDOHH3.png"
-
-    # Function to create Snowflake Session to connect to Snowflake
+# Function to create Snowflake Session to connect to Snowflake
     def create_session():
         if "snowpark_session" not in st.session_state:
             session = Session.builder.configs(json.load(open("connection.json"))).create()
@@ -101,7 +100,7 @@ def app2():
         return historical_data.to_pandas(), df_last_six_months_allocations, df_last_six_months_roi, df_last_months_allocations
 
     # Streamlit config
-    st.set_page_config("SportsCo Ad Spend Optimizer", APP_ICON_URL, "centered")
+    
     st.write("<style>[data-testid='stMetricLabel'] {min-height: 0.5rem !important}</style>", unsafe_allow_html=True)
     st.image(APP_ICON_URL, width=80)
     st.title("SportsCo Ad Spend Optimizer")
@@ -170,8 +169,14 @@ def app2():
             st.success("✅ Successfully wrote budgets & prediction to your Snowflake account!")
             st.snow()
 
+    
+    
 
-def app3():
+    
+   
+
+
+def app2():
     # %%
 
 
@@ -278,7 +283,7 @@ def main():
     elif app_selection == "SportsCo Ad Spend Optimizer":
         app3()
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
 
 
