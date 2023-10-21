@@ -39,6 +39,19 @@ Update connection.json with your Snowflake account details and credentials
 NOTE: For the account parameter, specify your account identifier and do not include the snowflakecomputing.com domain name. Snowflake automatically appends this when creating the connection.
 
 # Part 1: Forecasting + Anomaly Detection
+## Overview
+Using data analysis, organizations may handle uncertainty and improve their operations by using forecasting and anomaly detection. Strategic planning, resource allocation, and decision-making all benefit from forecasting, which uses historical data to predict future patterns. Forecasting offers a road map for the future, whether it be in terms of estimating revenue, demand, or impressions in advertising campaigns. On the other hand, anomaly detection acts as a watchful keeper, spotting errors or oddities in data. The ability to quickly identify unexpected deviations enables early intervention, ensuring data integrity, and reducing risks brought on by human error or system flaws. Combined, forecasting and anomaly detection provide businesses with a full toolkit that enables them to not only predict the future but also protect against unforeseen interruptions, eventually promoting better informed business decisions.
+
+### Data Preparation:
+Create a warehouse, database, and schema that will be used for loading, storing, processing, and querying data for this Quickstart. In a real-world situation, we would likely get raw logs from a DSP (such as The Trade Desk REDS) or ad server.
+
+### Streamlit App:
+* Forecasting
+![WhatsApp Image 2023-10-21 at 13 31 43_383e991b](https://github.com/AlgoDM-Fall2023-Team11/CaseStudy2/assets/69983754/3d2b7d1c-492a-4772-8ae8-08e236fd02ac)
+![image](https://github.com/AlgoDM-Fall2023-Team11/CaseStudy2/assets/69983754/a535e7d6-d8b9-44dd-bf53-6047fcbf19ae)
+
+* Anomaly Detection
+![image](https://github.com/AlgoDM-Fall2023-Team11/CaseStudy2/assets/69983754/51cc702d-61e3-44dd-8492-6aab22ac3f9c)
 
 # Part 2: Multi Page App: Customer Growth Navigator
 
