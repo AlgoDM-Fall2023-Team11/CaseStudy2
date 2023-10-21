@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+import sys
+print(sys.path)
+
 from snowflake.connector import connect
 from snowflake.ml.modeling.preprocessing import OneHotEncoder
 import json
@@ -13,14 +16,15 @@ from numpy import round
 APP_ICON_URL = "https://i.imgur.com/dBDOHH3.png"
 
 
+
 def app1():
     # Streamlit interface
     st.title("Customer Sales Prediction")
 
     connection = connect(
-        user='NAKULSHILEDAR',
-        password='13April1998$',
-        account='zaplmed-dqb37133',
+        user='usashir',
+        password='Way2Boston$12345',
+        account='hriescb-ijb29206',
         warehouse='FE_AND_INFERENCE_WH',
         database='tpcds_xgboost',
         schema='demo'
