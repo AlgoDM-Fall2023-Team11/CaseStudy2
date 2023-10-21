@@ -1,10 +1,6 @@
-# IE 7374: Algorithmic Digital Marketing
-# CASE STUDY 2 
+# IE 7374: Algorithmic Digital Marketing: CASE STUDY 2 
 # Snowpark for Python and Streamlit
 
-
-Team members 
-NUID
 Krishna Barfiwala
 002771997
 
@@ -23,13 +19,13 @@ Training a Machine Learning model outside of Snowflake and to deploy it as a Pyt
 Visualizing your working model in an end user app
 
 # Environment Setup
-## Python 3.9.18
-## Create and Activate Conda Environment (OR, use any other Python environment with Python 3.9.18)
-conda create --name snowpark -c https://repo.anaconda.com/pkgs/snowflake python=3.9.18
-conda activate snowpark
-## Install Snowpark for Python, Streamlit and other libraries in Conda environment
+**Python 3.9.18**
+**Create and Activate Conda Environment (OR, use any other Python environment with Python 3.9.18)**
+* conda create --name snowpark -c https://repo.anaconda.com/pkgs/snowflake python=3.9.18
+* conda activate snowpark
+**Install Snowpark for Python, Streamlit and other libraries in Conda environment**
 conda install -c https://repo.anaconda.com/pkgs/snowflake snowflake-snowpark-python pandas notebook scikit-learn cachetools streamlit
-## Python library packages:
+### Python library packages:
 * scikit-learn (version 1.3.0)
 * pandas
 * numpy
@@ -40,11 +36,9 @@ conda install -c https://repo.anaconda.com/pkgs/snowflake snowflake-snowpark-pyt
 Update connection.json with your Snowflake account details and credentials
 NOTE: For the account parameter, specify your account identifier and do not include the snowflakecomputing.com domain name. Snowflake automatically appends this when creating the connection.
 
-# Part 1
-# Forecasting + Anomaly Detection
+# Part 1: Forecasting + Anomaly Detection
 
-# Part 2 
-# Multi Page App: Customer Growth Navigator
+# Part 2: Multi Page App: Customer Growth Navigator
 
 ## Data Prerpration
 * Customer Lifetime Value Computation: This demo utilizes the TPC DS sample dataset that is made available via Snowflake share. It can be configured to run on either the 10 TB
