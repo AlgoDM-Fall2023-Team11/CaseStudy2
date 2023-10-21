@@ -183,7 +183,7 @@ def app2():
 
     # %%
     # Create a session to Snowflake with credentials
-    with open("ROI\creds.json") as f:
+    with open("creds.json") as f:
         connection_parameters = json.load(f)
     session = Session.builder.configs(connection_parameters).create()
 
@@ -274,13 +274,13 @@ def app2():
 # Create a multipage layout
 def main():
     st.sidebar.title("Navigation")
-    app_selection = st.sidebar.radio("Go to", ["Customer Sales Prediction", "Customer Spend Prediction Model", "SportsCo Ad Spend Optimizer"])
+    app_selection = st.sidebar.radio("Go to", ["Customer Life time value with XgBoost", "Customer Spend Prediction", "SportsCo Ad Spend Insights"])
 
-    if app_selection == "Customer Sales Prediction":
+    if app_selection == "Customer Life time value with XgBoost":
         app1()
-    elif app_selection == "Customer Spend Prediction Model":
+    elif app_selection == "Customer Spend Prediction":
         app2()
-    elif app_selection == "SportsCo Ad Spend Optimizer":
+    elif app_selection == "SportsCo Ad Spend Insights":
         app3()
 
 if __name__ == "__main__":
