@@ -1,12 +1,11 @@
 # IE 7374: Algorithmic Digital Marketing: CASE STUDY 2 
 # Snowpark for Python and Streamlit
 
-![image](https://github.com/AlgoDM-Fall2023-Team11/CaseStudy2/assets/69983754/03cc31f3-c74e-42e6-979e-ac6930378d16)
 
 
 Codelabs Link: https://codelabs-preview.appspot.com/?file_id=18NJN-UiLa7trpFAQhAThFkSs_s3izobcrK1eJwga4i4#0
 
-* Krishna Barfiwala: 002771997
+*  <a href="[...](https://www.linkedin.com/in/krishna-barfiwala/)">Krishna Barfiwala: 002771997</a>
 
 * Nakul Shiledar: 002738981
 
