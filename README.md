@@ -1,14 +1,13 @@
 # IE 7374: Algorithmic Digital Marketing: CASE STUDY 2 
 # Snowpark for Python and Streamlit
 
-Krishna Barfiwala
-002771997
+Codelabs Link: https://codelabs-preview.appspot.com/?file_id=18NJN-UiLa7trpFAQhAThFkSs_s3izobcrK1eJwga4i4#0
 
-Nakul Shiledar 
-002738981
+* Krishna Barfiwala: 002771997
 
-Usashi Roy
-002752872
+* Nakul Shiledar: 002738981
+
+* Usashi Roy: 002752872
 
 
 Snowpark brings deeply integrated, DataFrame-style programming to the languages developers like to use, and functions to help them build and deploy custom programs including machine learning models. And to bring predictive insights into actions, data scientists can build interactive applications that business stakeholders can use to interact with those models using Streamlit
