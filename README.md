@@ -5,11 +5,11 @@
 
 Codelabs Link: https://codelabs-preview.appspot.com/?file_id=18NJN-UiLa7trpFAQhAThFkSs_s3izobcrK1eJwga4i4#0
 
-*  <a href="https://www.linkedin.com/in/krishna-barfiwala/">Krishna Barfiwala: 002771997</a>
+* <a href="https://www.linkedin.com/in/krishna-barfiwala/">Krishna Barfiwala: 002771997</a>
 
-* Nakul Shiledar: 002738981
+* <a href="https://www.linkedin.com/in/nakulshiledar/">Nakul Shiledar: 002738981</a>
 
-* Usashi Roy: 002752872
+* <a href="https://www.linkedin.com/in/usashisurajitroy/">Usashi Roy: 002752872</a>
 
 
 Snowpark brings deeply integrated, DataFrame-style programming to the languages developers like to use, and functions to help them build and deploy custom programs including machine learning models. And to bring predictive insights into actions, data scientists can build interactive applications that business stakeholders can use to interact with those models using Streamlit
