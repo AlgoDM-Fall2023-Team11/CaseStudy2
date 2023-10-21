@@ -5,7 +5,7 @@
 
 Codelabs Link: https://codelabs-preview.appspot.com/?file_id=18NJN-UiLa7trpFAQhAThFkSs_s3izobcrK1eJwga4i4#0
 
-*  <a href="[...](https://www.linkedin.com/in/krishna-barfiwala/)">Krishna Barfiwala: 002771997</a>
+*  <a href="https://www.linkedin.com/in/krishna-barfiwala/">Krishna Barfiwala: 002771997</a>
 
 * Nakul Shiledar: 002738981
 
